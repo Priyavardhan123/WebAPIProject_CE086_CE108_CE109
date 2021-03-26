@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SubjectDatabase" Class="SubjectDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SubjectDatabase.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SubjectDatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SubjectTable" Member="SubjectTables">
+    <Type Name="SubjectTable">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Total_lectures" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Required_attendance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Attended_lectures" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
