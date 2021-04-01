@@ -89,16 +89,21 @@
             var required = parseInt($("#required").val());
             var total = parseInt($("#total").val());
            
-            if (required > 100) {
+            if (required > 100)
+            {
                 alert("Required % attendance should be less than 100");
-                    
             }
-            else if (attended > total) {
+            else if (attended > total)
+            {
                 alert("Number of lectures attended cannot be more than total number of lectures");
             }
+            else if (attended < 0)
+            {
+                alert("Number of lectures cannot be negative");
+            }
             else {
-                    var req_lec = (required * total) / 100;
-                    req_lec = req_lec - attended;
+                    var req_lec =  (required * total) / 100;
+                    req_lec = Math.ceil( req_lec - attended );
 
                     if (req_lec <= 0) {
                         document.getElementById("result").innerHTML = "Bravo !! You have acheived " + required + " % attendance...";

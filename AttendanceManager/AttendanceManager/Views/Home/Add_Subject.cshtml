@@ -56,6 +56,10 @@
             {
                 alert("Number of lectures attended cannot be more than total number of lectures");
             }
+            else if (attended < 0)
+            {
+                alert("Number of lectures cannot be negative");
+            }
             else {
                 $.post("http://localhost:50948/api/subject",
                     {
